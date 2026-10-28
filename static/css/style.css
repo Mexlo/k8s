@@ -1,0 +1,37 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 16px; line-height: 1.6; color: #222; background-color: #f5f6fa; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+img { max-width: 100%; height: auto; border-radius: 8px; }
+.header { display: flex; flex-direction: column; gap: 12px; padding: 16px; background-color: #1a3a8f; color: white; position: sticky; top: 0; z-index: 10; }
+.header h1 { margin: 0; font-size: 22px; }
+.nav { display: flex; flex-wrap: wrap; gap: 16px; }
+.nav a { color: white; text-decoration: none; font-weight: bold; }
+.nav a:hover { text-decoration: underline; }
+.sections { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 20px 0; }
+.section { background-color: white; border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.1); }
+.section h2 { color: #1a3a8f; margin-top: 0; }
+mark { background-color: #ffe08a; padding: 0 3px; }
+.table-wrapper { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+th { background-color: #1a3a8f; color: white; }
+tbody tr:nth-child(even) { background-color: #f7f7f7; }
+tbody tr:hover { background-color: #eef3ff; }
+.form label { display: block; margin-top: 12px; font-weight: bold; }
+.form input, .form select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+.form input[type="checkbox"] { width: auto; }
+.form input:focus, .form select:focus { outline: none; border-color: #1a3a8f; }
+.btn { color: white; background-color: #1a3a8f; border: 2px solid #12296b; font-family: inherit; font-size: 16px; font-weight: bold; padding: 12px 24px; margin-top: 16px; width: 100%; border-radius: 6px; cursor: pointer; }
+.btn:hover { background-color: #12296b; }
+.footer { margin-top: 32px; padding: 20px; background-color: #12296b; color: white; text-align: center; }
+@media (min-width: 768px) {
+  .header { flex-direction: row; justify-content: space-between; align-items: center; }
+  .sections { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .btn { width: auto; }
+  body { font-size: 17px; }
+}
+@media (min-width: 1024px) {
+  .sections { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  #about,
+  #catalog { grid-column: 1 / -1; }
+}
